@@ -22,15 +22,15 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home </a>
+                    <a class="nav-link" href="home.html">Home </a>
                         <span class="sr-only">Current</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="pilihmobil.html">Order</a>
+                    <a class="nav-link" href="pesan.php">Order</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="sk.html">Syarat & Ketentuan</a>
+                    <a class="nav-link" href="sk.php">Syarat & Ketentuan</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#contact">Hubungi Kami </a>
@@ -164,7 +164,7 @@
                             </div>
                     </ul>
                 </nav>
-                
+
   <div class="col-md-12 col-sm-12">
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">

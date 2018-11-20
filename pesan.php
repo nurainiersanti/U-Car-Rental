@@ -34,7 +34,7 @@
   }
 
 ?>
-          <?php 
+          <?php
               if ($status=='ok') {
                 echo '<br><br><div class="alert alert-success" role="alert">Data Mahasiswa berhasil disimpan</div>';
               }
@@ -129,7 +129,7 @@
           </fieldset>
 
           <div class="form-grup">
-            <button type="submit" name="button">Next</button>
+            <button type="submit" name="button" href="pilihmobil.php">Next</button>
           </div>
 
         </form>
