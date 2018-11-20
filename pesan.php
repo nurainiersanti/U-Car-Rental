@@ -3,9 +3,6 @@
   //dengan include, semua kode dalam file conn.php dapat digunakan pada file index.php
   include ('conn.php');
 
-  //include header
-  include ('template/header.php');
-  include ('template/sidebar.php');
 
   $status = '';
   //melakukan pengecekan apakah ada form yang dipost
@@ -51,10 +48,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/bootstrap-min.css">
-    <link rel="stylesheet" href="css/bootstrap-grid.css">
-    <link rel="stylesheet" type="text/css" href="css/stylepesan.css">
+    <link rel="stylesheet" href="asset/css/bootstrap.css">
+    <link rel="stylesheet" href="asset/css/bootstrap-min.css">
+    <link rel="stylesheet" href="asset/css/bootstrap-grid.css">
+    <link rel="stylesheet" type="text/css" href="asset/css/stylepesan.css">
     <title>Pesan Mobil</title>
   </head>
   <body>
