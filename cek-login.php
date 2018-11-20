@@ -7,10 +7,12 @@
    $query = $conn->query($sql);
    $hasil = $query->fetch_assoc();
    if($query->num_rows == 0) {
-     echo "<div align='center'>Username Belum Terdaftar! <a href='index.php'>Back</a></div>";
+    echo "<script>alert('Username Belum Terdaftar, Silahkan Daftar Terlebih Dahulu')</script>";
+    echo "<meta http-equiv='refresh' content='1 url=index.php'>";
    } else {
      if($password <> $hasil['password']) {
-       echo "<div align='center'>Password salah! <a href='index.php'>Back</a></div>";
+      echo "<script>alert('Password Salah')</script>";
+      echo "<meta http-equiv='refresh' content='1 url=index.php'>";
      } else {
        $_SESSION['username'] = $hasil['username'];
        header('location:home.php');
