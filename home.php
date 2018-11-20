@@ -39,10 +39,132 @@
         </div>
         <ul class="nav justify-content-end">
             <li class="nav-item">
-                <a class="nav-link" href="logout.php">Logout</a>
-            </li>
-        </ul>
-    </nav>
+                <button type="button" class="btn btn-link" data-toggle="modal" data-target="#daftar">
+                    <b>Daftar</b>
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="daftar" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="title">DAFTAR</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="daftar-proses.php" name="daftar" method="POST">
+                                    <div class="form-group">
+                                            <label for="name" class="col-form-label">Nama</label>
+                                                <input type="text" class="form-control" name="nama" placeholder="Nama Lengkap" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="uname" class="col-form-label">Username</label>
+                                            <input type="text" class="form-control" name="username" placeholder="Username" required>
+                                            <div class="invalid-tooltip">
+                                                Harus Diisi.
+                                            </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email" class="col-form-label">Email</label>
+                                            <input type="text" class="form-control" name="email" placeholder="example@mail.com" required>
+                                            <div class="invalid-tooltip">
+                                                Harus Diisi.
+                                            </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="tlp" class="col-form-label">No. Telepon</label>
+                                            <input type="text" class="form-control" name="no_telp" placeholder="No. Telepon" required>
+                                            <div class="invalid-tooltip">
+                                                Harus Diisi.
+                                            </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="alamat" class="col-form-label">Alamat</label>
+                                            <input type="text" class="form-control" name="alamat" placeholder="Alamat Lengkap" required>
+                                            <div class="invalid-tooltip">
+                                                Harus Diisi.
+                                            </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="sandi" class="col-form-label">Password</label>
+                                            <input type="password" class="form-control" name="password" placeholder="Password" required>
+                                            <div class="invalid-tooltip">
+                                                Harus Diisi.
+                                            </div>
+                                            <small id="passwordHelpBlock" class="form-text text-muted">
+                                                Password harus berisi maksimal 10 karakter menggunakan huruf maupun angka, tidak boleh ada spasi, special characters, atau emoji.
+                                            </small>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="repassword" class="col-form-label">Confirm Password</label>
+                                            <input type="password" class="form-control" name="conf_pass" placeholder="Password" required>
+                                            <div class="invalid-tooltip">
+                                                Harus Diisi.
+                                            </div>
+                                    </div>
+                                    <label for="ktp" class="col-form-label">Foto/Scan KTP</label>
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" name="ktp" required>
+                                                <label class="custom-file-label" for="ktp">Choose file...</label>
+                                                    <div class="invalid-feedback">Example invalid custom file feedback</div>
+                                        </div>
+                                    <label for="sim" class="col-form-label"><br>Foto/Scan SIM</label></br>
+                                        <div class="custom-file">
+                                                    <input type="file" class="custom-file-input" name="sim" required>
+                                                    <label class="custom-file-label" for="sim">Choose file...</label>
+                                                    <div class="invalid-feedback">Example invalid custom file feedback</div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="submit" class="btn btn-primary">Daftar</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <button type="button" class="btn btn-link" data-toggle="modal" data-target="#login">
+                            <b>Login</b></button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="label" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="ModalLongTitle">LOGIN</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+									<form method="POST" name="login" action="cek-login.php">
+										<div class="form-group">
+											<label class="col-form-label">Username</label>
+											<input type="text" class="form-control" name="username" placeholder="Username">
+										</div>
+										<div class="form-group">
+											<label for="password" class="col-form-label">Password</label>
+											<input type="password" class="form-control" name="password" placeholder="Password">
+										</div>
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" id="autoSizingCheck2">
+											<label class="form-check-label" for="autoSizingCheck2">
+												Remember me
+											</label>
+										</div>
+										<div class="modal-footer">
+											<input class="btn btn-primary" type="submit" value="Login">
+										</div>
+									</form>
+								</div>
+
+                                    </div>
+                                </div>
+                            </div>
+                    </ul>
+                </nav>
+                
   <div class="col-md-12 col-sm-12">
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
