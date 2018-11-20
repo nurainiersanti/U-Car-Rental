@@ -7,7 +7,7 @@
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link href="asset/css/style.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="asset/css/bootstrap.css">
+	  <link rel="stylesheet" type="text/css" href="asset/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="asset/css/font.css">
     <link rel="stylesheet" type="text/css" href="asset/css/font-awesome.css">
     <script src="asset/js/bootstrap.min.js"></script>
@@ -156,6 +156,10 @@
                             </div>
                     </ul>
                 </nav>
+    <div class="container">
+
+
+    </div>
 
     <div class="album py-4">
             <div class="container">

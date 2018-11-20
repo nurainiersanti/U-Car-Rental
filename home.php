@@ -30,7 +30,7 @@
                     <a class="nav-link" href="pesan.php">Order</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="sk.php">Syarat & Ketentuan</a>
+                    <a class="nav-link" href="sk.html">Syarat & Ketentuan</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#contact">Hubungi Kami </a>
