@@ -37,6 +37,11 @@
                 </li>
             </ul>
         </div>
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link" href="logout.php">Logout</a>
+            </li>
+        </ul>
     </nav>
   <div class="col-md-12 col-sm-12">
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
