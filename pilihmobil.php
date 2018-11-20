@@ -10,6 +10,8 @@
 	  <link rel="stylesheet" type="text/css" href="asset/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="asset/css/font.css">
     <link rel="stylesheet" type="text/css" href="asset/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="asset/css/stylepilihmobil.css">
+    <link rel="stylesheet" href="asset/css/bootstrap-min.css">
     <script src="asset/js/bootstrap.min.js"></script>
     <script src="asset/js/jquery.js"></script>
     <script type="text/javascript" src="asset/js/style.js"></script>
@@ -157,6 +159,22 @@
                     </ul>
                 </nav>
     <div class="container">
+      <div id="header">
+        <p>Home >> Order >> Pesan Mobil >> Pilih Mobil >> Pembayaran.</p>
+        <h2>Pembayaran</h2>
+
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="satuduatiga btn-primary non-active" style="cursor:not-allowed">
+              1
+            </label>
+            <label class="satuduatiga btn-primary active">
+              2
+            </label>
+            <label class="satuduatiga btn-primary non-active" style="cursor:not-allowed">
+              3
+            </label>
+          </div>
+      </div>
 
 
     </div>
