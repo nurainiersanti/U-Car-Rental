@@ -16,18 +16,18 @@
   </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #FFFFFF;">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="home.php">
             <img src="asset/image/ucar.png" width="150" height="30" class="rounded float-left" alt=" ">
         </a>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html"> Home
+                    <a class="nav-link" href="home.php"> Home
                     <span class="sr-only">Current</span>
                 </a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="pilihmobil.html">Order</a>
+                    <a class="nav-link" href="pesan.php">Order</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="sk.html">Syarat & Ketentuan</a>
@@ -168,7 +168,7 @@
                                 <div class="card-body">
                                     <h5 class="card-title">Rp. 300.000</h5>
                                     <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-                                    <a href="pesan.html" class="btn btn-primary" style="margin-left: 190px">Order</a>
+                                    <a href="pembayaran.php" class="btn btn-primary" style="margin-left: 190px">Order</a>
                                 </div>
                             </div>
                         </div>
@@ -176,11 +176,11 @@
                             <div class="card mb-4 shadow-sm" style="margin-top:2px !important">
                                 <div class="thumbnail">
                                     <img src="asset/image/mobilio 2.png" alt="Thumbnail [100x210]">
-                                </div>    
+                                </div>
                                     <div class="card-body">
                                         <h5 class="card-title">Rp. 500.000</h5>
                                         <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-                                        <a href="pesan.html" class="btn btn-primary" style="margin-left: 190px">Order</a>
+                                        <a href="pembayaran.php" class="btn btn-primary" style="margin-left: 190px">Order</a>
                                     </div>
                                 </div>
                         </div>
@@ -192,19 +192,19 @@
                                     <div class="card-body">
                                         <h5 class="card-title">Rp. 300.000</h5>
                                         <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-                                        <a href="pesan.html" class="btn btn-primary" style="margin-left: 190px">Order</a>
+                                        <a href="pembayaran.php" class="btn btn-primary" style="margin-left: 190px">Order</a>
                                     </div>
                                 </div>
                         </div>
                         <div class="col-md-4">
                                 <div class="card card mb-4 shadow-sm" style="margin-top:2px !important">
                                     <div class="thumbnail">
-                                        <img src="asset/image/freed.png" alt="Thumbnail [100x210]"> 
+                                        <img src="asset/image/freed.png" alt="Thumbnail [100x210]">
                                     </div>
                                     <div class="card-body">
                                         <h5 class="card-title">Rp. 300.000</h5>
                                         <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-                                        <a href="pesan.html" class="btn btn-primary" style="margin-left: 190px">Order</a>
+                                        <a href="pembayaran.php" class="btn btn-primary" style="margin-left: 190px">Order</a>
                                     </div>
                                 </div>
                         </div>
@@ -216,7 +216,7 @@
                                     <div class="card-body">
                                         <h5 class="card-title">Rp. 250.000</h5>
                                         <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-                                        <a href="pesan.html" class="btn btn-primary" style="margin-left: 190px">Order</a>
+                                        <a href="pembayaran.php" class="btn btn-primary" style="margin-left: 190px">Order</a>
                                     </div>
                                 </div>
                         </div>
@@ -228,7 +228,7 @@
                                     <div class="card-body">
                                         <h5 class="card-title">Rp. 300.000</h5>
                                         <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-                                        <a href="pesan.html" class="btn btn-primary" style="margin-left: 190px">Order</a>
+                                        <a href="pembayaran.php" class="btn btn-primary" style="margin-left: 190px">Order</a>
                                     </div>
                                 </div>
                         </div>

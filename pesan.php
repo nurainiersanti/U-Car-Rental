@@ -126,7 +126,7 @@
           </fieldset>
 
           <div class="form-grup">
-            <button href="pilihmobil.php"type="submit" name="button" >Next</button>
+            <button href="pilihmobil.php" type="submit" name="button" >Next</button>
           </div>
 
         </form>

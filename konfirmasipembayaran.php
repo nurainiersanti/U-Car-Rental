@@ -65,7 +65,7 @@
                 </fieldset>
 
                 <div class="form-grup">
-                  <button type="submit" name="button">Next</button>
+                  <button href "verifikasipembayaran.php" type="submit" name="button">Next</button>
                 </div>
 
               </form>
@@ -77,7 +77,7 @@
         <div class="col-4">
           <div class="container2">
             <div class="form-container2">
-              <form  action="action.php" method="post" autocomplete="on" id="form1">
+              <form  action="verifikasipembayaran.php" method="post" autocomplete="on" id="form1">
                   <div class=" confirm form-grup">
                     <fieldset>
                       <label class="label">Kode Booking </label>

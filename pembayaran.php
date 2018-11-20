@@ -30,7 +30,7 @@
         </div>
     </div>
       <div class="form-container">
-        <form  action="action.php" method="post" autocomplete="on" id="form1">
+        <form  action="konfirmasipembayaran.php" method="post" autocomplete="on" id="form1">
           <fieldset>
             <div class="form-grup">
               <div class="label">
@@ -99,7 +99,7 @@
           </fieldset>
 
           <div class="form-grup">
-            <button type="submit" name="button">Next</button>
+            <button href="konfirmasipembayaran.php" type="submit" name="button">Next</button>
           </div>
 
         </form>
