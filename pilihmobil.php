@@ -44,7 +44,7 @@
                                 <div class="modal-dialog modal-dialog-centered" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                        <h5 class="modal-title" id="title">DAFTAR</h5>
+                                        <h6 class="modal-title" id="title">DAFTAR</h6>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
@@ -128,7 +128,7 @@
                                 <div class="modal-dialog modal-dialog-centered" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                        <h5 class="modal-title" id="ModalLongTitle">LOGIN</h5>
+                                        <h6 class="modal-title" id="ModalLongTitle">LOGIN</h6>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button></div>
@@ -160,8 +160,8 @@
                 </nav>
     <div class="container">
       <div id="header">
-        <p>Home >> Order >> Pesan Mobil >> Pilih Mobil >> Pembayaran.</p>
-        <h2>Pembayaran</h2>
+        <p>Home >> Order >> Pesan Mobil >> Pilih Mobil.</p>
+        <h2>Pilih Mobil</h2>
 
         <div class="btn-group btn-group-toggle" data-toggle="buttons">
             <label class="satuduatiga btn-primary non-active" style="cursor:not-allowed">
@@ -188,7 +188,8 @@
                                     <img src="asset/image/avanza.png" alt="Thumbnail [100x210]">
                                 </div>
                                 <div class="card-body">
-                                    <h5 class="card-title">Rp. 300.000</h5>
+                                    <h6 class="card-title">Toyota Avanza</h6>
+                                    <h6 class="card-title">Rp. 300.000</h6>
                                     <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
                                     <a href="pembayaran.php" class="btn btn-primary" style="margin-left: 190px">Order</a>
                                 </div>
@@ -200,7 +201,8 @@
                                     <img src="asset/image/mobilio 2.png" alt="Thumbnail [100x210]">
                                 </div>
                                     <div class="card-body">
-                                        <h5 class="card-title">Rp. 500.000</h5>
+                                        <h6 class="card-title">Honda Mobilio</h6>
+                                        <h6 class="card-title">Rp. 500.000</h6>
                                         <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
                                         <a href="pembayaran.php" class="btn btn-primary" style="margin-left: 190px">Order</a>
                                     </div>
@@ -212,7 +214,8 @@
                                         <img src="asset/image/innova1.png" alt="Thumbnail [100x210]">
                                     </div>
                                     <div class="card-body">
-                                        <h5 class="card-title">Rp. 300.000</h5>
+                                        <h6 class="card-title">Kijang Innova</h6>
+                                        <h6 class="card-title">Rp. 300.000</h6>
                                         <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
                                         <a href="pembayaran.php" class="btn btn-primary" style="margin-left: 190px">Order</a>
                                     </div>
@@ -224,7 +227,8 @@
                                         <img src="asset/image/freed.png" alt="Thumbnail [100x210]">
                                     </div>
                                     <div class="card-body">
-                                        <h5 class="card-title">Rp. 300.000</h5>
+                                        <h6 class="card-title">Honda Freed</h6>
+                                        <h6 class="card-title">Rp. 300.000</h6>
                                         <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
                                         <a href="pembayaran.php" class="btn btn-primary" style="margin-left: 190px">Order</a>
                                     </div>
@@ -236,7 +240,8 @@
                                         <img src="asset/image/jazz.jpg" alt="Thumbnail [100x210]">
                                     </div>
                                     <div class="card-body">
-                                        <h5 class="card-title">Rp. 250.000</h5>
+                                        <h6 class="card-title">Honda Jazz</h6>
+                                        <h6 class="card-title">Rp. 250.000</h6>
                                         <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
                                         <a href="pembayaran.php" class="btn btn-primary" style="margin-left: 190px">Order</a>
                                     </div>
@@ -248,7 +253,8 @@
                                          <img src="asset/image/ertiga.jpg" alt="Thumbnail [100x210]">
                                     </div>
                                     <div class="card-body">
-                                        <h5 class="card-title">Rp. 300.000</h5>
+                                        <h6 class="card-title">Suzuki Ertiga</h6>
+                                        <h6 class="card-title">Rp. 300.000</h6>
                                         <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
                                         <a href="pembayaran.php" class="btn btn-primary" style="margin-left: 190px">Order</a>
                                     </div>
