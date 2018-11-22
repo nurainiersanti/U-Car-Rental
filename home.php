@@ -38,7 +38,6 @@
             </ul>
         </div>
     </nav>
-    
     <div class="col-md-12 col-sm-12">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
