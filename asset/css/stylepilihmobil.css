@@ -1,0 +1,33 @@
+#header{
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
+
+#header:after, #header:before{
+    display: table;
+    content: ""
+}
+
+#header:after{
+    clear: both;
+}
+
+#header p{
+  font-weight: 500;
+  color: black;
+
+}
+
+#header h2{
+  font-weight: 600;
+  color: black;
+}
+
+.satuduatiga{
+  border-radius: 10px
+  font-family: Arial;
+  color: black;
+  font-size: 20px;
+  padding: 10px 123px;
+  text-decoration: none;
+  margin-top: 40px;
