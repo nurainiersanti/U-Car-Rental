@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 14, 2018 at 09:13 AM
--- Server version: 10.1.30-MariaDB
+-- Generation Time: 01 Des 2018 pada 15.27
+-- Versi Server: 10.1.30-MariaDB
 -- PHP Version: 5.6.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `history`
+-- Struktur dari tabel `history`
 --
 
 CREATE TABLE `history` (
@@ -38,7 +38,7 @@ CREATE TABLE `history` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mobil`
+-- Struktur dari tabel `mobil`
 --
 
 CREATE TABLE `mobil` (
@@ -53,7 +53,7 @@ CREATE TABLE `mobil` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pegawai`
+-- Struktur dari tabel `pegawai`
 --
 
 CREATE TABLE `pegawai` (
@@ -67,7 +67,7 @@ CREATE TABLE `pegawai` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pelanggan`
+-- Struktur dari tabel `pelanggan`
 --
 
 CREATE TABLE `pelanggan` (
@@ -82,7 +82,7 @@ CREATE TABLE `pelanggan` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `penjadwalan`
+-- Struktur dari tabel `penjadwalan`
 --
 
 CREATE TABLE `penjadwalan` (
@@ -95,7 +95,36 @@ CREATE TABLE `penjadwalan` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `supir`
+-- Struktur dari tabel `penjemputan`
+--
+
+CREATE TABLE `penjemputan` (
+  `Nama_pelanggan` varchar(50) NOT NULL,
+  `Alamat_pelanggan` varchar(100) NOT NULL,
+  `Nik_Pelanggan` varchar(15) NOT NULL,
+  `Telp_pelanggan` varchar(15) NOT NULL,
+  `Fasilitas` varchar(100) NOT NULL,
+  `Alamat_jemput` varchar(100) NOT NULL,
+  `Waktu_jemput` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `pinjam`
+--
+
+CREATE TABLE `pinjam` (
+  `durasi_pinjam` varchar(10) NOT NULL,
+  `tujuan_pergi` varchar(50) NOT NULL,
+  `tgl_pinjam` date NOT NULL,
+  `mobil_jenis` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `supir`
 --
 
 CREATE TABLE `supir` (
@@ -110,7 +139,7 @@ CREATE TABLE `supir` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `transaksi`
+-- Struktur dari tabel `transaksi`
 --
 
 CREATE TABLE `transaksi` (
@@ -155,6 +184,18 @@ ALTER TABLE `pelanggan`
 --
 ALTER TABLE `penjadwalan`
   ADD PRIMARY KEY (`kodemobil`);
+
+--
+-- Indexes for table `penjemputan`
+--
+ALTER TABLE `penjemputan`
+  ADD PRIMARY KEY (`Nik_Pelanggan`);
+
+--
+-- Indexes for table `pinjam`
+--
+ALTER TABLE `pinjam`
+  ADD PRIMARY KEY (`mobil_jenis`);
 
 --
 -- Indexes for table `supir`

@@ -159,7 +159,6 @@
                 </nav>
     <div class="container">
     <div id="header">
-      <p>Home >> Order >> Pesan Mobil.</p>
       <h2>Pesan Mobil</h2>
       <div class="btn-group btn-group-toggle" data-toggle="buttons">
           <label class="satuduatiga btn-light active">
@@ -174,14 +173,12 @@
         </div>
     </div>
       <div class="form-container">
-        <form  action="pilihmobil.php" method="post" autocomplete="on" id="form1">
+        <form  action="pesan-aksi.php" method="POST" autocomplete="on" id="form1">
           <fieldset>
             <div class="form-grup">
-              <div class="label">
-              <label>Jenis Mobil</label>
-              </div>
-              <div class="input">
-                <select  name="Jenis Mobil">
+            <div class="label">
+              <label>Jenis Mobil</label></div>
+                <select  class="custom-select" name="jenis_mobil" required="required">
                   <option value="Luxury cars">Luxury car</option>
                   <option value="Sedan cars">Sedan cars</option>
                   <option value="Mpv cars">Mvp cars</option>
@@ -189,14 +186,11 @@
                   <option value="Wedding cars">Wedding cars</option>
                   <option value="Transporter & Bus">Transporter & Bus</option>
                 </select>
-              </div>
             </div>
             <div class="form-grup">
               <div class="label">
-              <label>Durasi</label>
-              </div>
-              <div class="input">
-                <select  name="Durasi">
+              <label>Durasi</label></div>
+                <select class="custom-select" name="durasi" required="required">
                   <option value="1 Hari">1 Hari</option>
                   <option value="2 Hari">2 Hari</option>
                   <option value="3 Hari">3 Hari</option>
@@ -206,24 +200,17 @@
                   <option value="7 Hari">7 Hari</option>
                 </select>
               </div>
-            </div>
             <div class="form-grup">
               <div class="label">
-              <label>Tujuan</label>
-              </div>
-              <div class="input">
-                <input type="text" name="tujuan" placeholder="Isikan tujuan anda" maxlength="30" autofocus>
-              </div>
+              <label>Tujuan</label></div>
+                <input class="form-control" type="text" name="tujuan_pergi" placeholder="Isikan tujuan anda" maxlength="30" autofocus required="required">
             </div>
             <div class="form-grup">
               <div class="label">
               <label>Tanggal pinjam</label>
               </div>
-              <div class="input">
-                <input type="date" name="Tanggal pinjam">
-              </div>
+                <input type="date" name="tgl_pinjam" required="required">
             </div>
-
 
           </fieldset>
 

@@ -22,12 +22,12 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home </a>
+                    <a class="nav-link" href="index.php">Home </a>
                         <span class="sr-only">Current</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="pilihmobil.html">Order</a>
+                    <a class="nav-link" href="pesan.php">Order</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="sk.html">Syarat & Ketentuan</a>

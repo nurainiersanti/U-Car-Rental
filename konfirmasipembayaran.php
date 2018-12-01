@@ -162,7 +162,6 @@
         <div class="col-12">
           <div class="container1">
             <div id="header">
-            <p>Home >> Order >> Pesan Mobil >> Pilih Mobil >> Pembayaran >> Konfirmasi Pembayaran.</p>
             <h2>Konfirmasi Pemesanan</h2>
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
                 <label class="satuduatiga btn-light non-active" style="cursor:not-allowed">

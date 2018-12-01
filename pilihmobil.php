@@ -160,7 +160,6 @@
                 </nav>
     <div class="container">
       <div id="header">
-        <p>Home >> Order >> Pesan Mobil >> Pilih Mobil.</p>
         <h2>Pilih Mobil</h2>
 
         <div class="btn-group btn-group-toggle" data-toggle="buttons">
