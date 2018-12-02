@@ -27,7 +27,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="pilihmobil.php">Order</a>
+                    <a class="nav-link" href="pesan.php">Order</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="sk.html">Syarat & Ketentuan</a>

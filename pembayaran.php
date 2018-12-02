@@ -50,7 +50,6 @@
     </nav>
     <div class="container">
     <div id="header">
-      <p>Home >> Order >> Pesan Mobil >> Pilih Mobil >> Pembayaran.</p>
       <h2>Pembayaran</h2>
       <div class="btn-group btn-group-toggle" data-toggle="buttons">
           <label class="satuduatiga btn-light non-active" style="cursor:not-allowed">
