@@ -18,13 +18,13 @@
   </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #FFFFFF;">
-        <a class="navbar-brand" href="home.php">
+        <a class="navbar-brand" href="index.php">
             <img src="asset/image/ucar.png" width="150" height="30" class="rounded float-left" alt=" ">
         </a>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="home.php"> Home
+                    <a class="nav-link" href="index.php"> Home
                     <span class="sr-only">Current</span>
                 </a>
                 </li>

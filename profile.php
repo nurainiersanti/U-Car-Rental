@@ -9,29 +9,29 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="asset/css/bootstrap.css">
     <link rel="stylesheet" href="asset/css/bootstrap-min.css">
-    <link rel="stylesheet" type="text/css" href="asset/css/stylepembayaran.css">
-    <title>Pembayaran</title>
+    <link rel="stylesheet" href="asset/css/bootstrap-grid.css">
+    <link rel="stylesheet" type="text/css" href="asset/css/stylepesan.css">
+    <title>USER PROFILE</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #FFFFFF;">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="home.php">
             <img src="asset/image/ucar.png" width="150" height="30" class="rounded float-left" alt=" ">
         </a>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="home.php">Home </a>
-                        <span class="sr-only">Current</span>
-                    </a>
-                </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="home.php"> Home
+                    <span class="sr-only">Current</span>
+                </a>
+                </li>
+                <li class="nav-item active">
                     <a class="nav-link" href="pesan.php">Order</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="sk.html">Syarat & Ketentuan</a>
                 </li>
-            </ul>
-        </div>
+				</div>
         <ul class="nav justify-content-end">
           <li class="nav-item">
             <div class="btn-group dropleft">
@@ -50,29 +50,42 @@
     </nav>
     <div class="container">
     <div id="header">
-      <p>Home >> Order >> Pesan Mobil >> Pilih Mobil >> Pembayaran.</p>
-      <h2>Pembayaran</h2>
-      <div class="btn-group btn-group-toggle" data-toggle="buttons">
-          <label class="satuduatiga btn-light non-active" style="cursor:not-allowed">
-            1
-          </label>
-          <label class="satuduatiga btn-light non-active" style="cursor:not-allowed">
-            2
-          </label>
-          <label class="satuduatiga btn-light active">
-            3
-          </label>
-        </div>
+      <p>Home >> Profile </p>
+      <h2>User Profile</h2>
     </div>
       <div class="form-container">
-        <form  action="konfirmasipembayaran.php" method="post" autocomplete="on" id="form1">
+        <form  action="profile.php" method="post" autocomplete="on" id="form1">
           <fieldset>
             <div class="form-grup">
               <div class="label">
               <label>Nama</label>
               </div>
               <div class="input">
-                <input type="text" name="Nama" placeholder="Isikan nama anda" maxlength="30" autofocus>
+                <input type="text" name="nama" placeholder="Isikan Nama lengkap Anda" value="Dwi Darma Ardiansyah" maxlength="30" autofocus>
+              </div>
+            </div>
+            <div class="form-grup">
+              <div class="label">
+              <label>Username</label>
+              </div>
+              <div class="input">
+                <input type="text" name="username" placeholder="Isikan Username Anda" value="ardiganteng09" maxlength="30" autofocus>
+              </div>
+            </div>
+            <div class="form-grup">
+              <div class="label">
+              <label>Email</label>
+              </div>
+              <div class="input">
+                <input type="text" name="email" placeholder="Isikan Email Anda" value="dwidarmaganteng@gmail.com" maxlength="30" autofocus>
+              </div>
+            </div>
+            <div class="form-grup">
+              <div class="label">
+              <label>No Telepon</label>
+              </div>
+              <div class="input">
+                <input type="text" name="telepon" placeholder="Isikan No Telepon Anda" value="081239906939" maxlength="30" autofocus>
               </div>
             </div>
             <div class="form-grup">
@@ -80,66 +93,20 @@
               <label>Alamat</label>
               </div>
               <div class="input">
-                <input type="text" name="alamat" placeholder="Isikan alamat anda" maxlength="30" autofocus>
+                <input type="text" name="alamat" placeholder="isi Alamat Lengkap Anda" value="Jln Rungkut Asri Timur XV No 12 Rungkut Surabaya" maxlength="100" autofocus >
               </div>
             </div>
-            <div class="form-grup">
-              <div class="label">
-              <label>Nomor KTP</label>
-              </div>
-              <div class="input">
-                <input type="text" name="Nomor KTP" placeholder="Isikan Nomor KTP anda" maxlength="30" autofocus>
-              </div>
-            </div>
-            <div class="form-grup">
-              <div class="label">
-              <label>Nomor Telepon</label>
-              </div>
-              <div class="input">
-                <input type="text" name="Nomor Telepon" placeholder="Isikan Nomor telepon anda" maxlength="30" autofocus>
-              </div>
-            </div>
-            <div class="form-grup">
-              <div class="label">
-              <label>Fasilitas</label>
-              </div>
-              <div class="input">
-                <select  name="Fasilitas">
-                  <option value="Supir">Supir</option>
-                  <option value="Tanpa Supir">Tanpa Supir</option>
-                  <option value="BBM">BBM</option>
-                  <option value="Supir & BBM">Supir & BBM</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-grup">
-              <div class="label">
-              <label>Alamat jemput</label>
-              </div>
-              <div class="input">
-                <textarea name="Alamat jemput" placeholder="isi Alamat jemput anda"></textarea>
-              </div>
-            </div>
-            <div class="form-grup">
-              <div class="label">
-              <label>Waktu jemput</label>
-              </div>
-              <div class="input">
-                <input type="time" name="Waktu jemput" placeholder="Isikan waktu jemput anda" maxlength="30" autofocus>
-              </div>
-            </div>
-
-
-
           </fieldset>
 
           <div class="form-grup">
-            <button href="konfirmasipembayaran.php" type="submit" name="button">Next</button>
+            <button href="profile.php" type="submit" name="button" >Save</button>
           </div>
 
         </form>
 
+
       </div>
+
     </div>
 
 
