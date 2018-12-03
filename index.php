@@ -161,6 +161,7 @@
                                     </div>
                                 </div>
                             </div>
+                          </li>
         </ul>
     </nav>
     <div class="col-md-12 col-sm-12">

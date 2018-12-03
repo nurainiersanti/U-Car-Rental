@@ -22,7 +22,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.php">Home </a>
+                    <a class="nav-link" href="home.php">Home </a>
                         <span class="sr-only">Current</span>
                     </a>
                 </li>
@@ -37,6 +37,21 @@
                 </li>
             </ul>
         </div>
+        <ul class="nav justify-content-end">
+          <li class="nav-item">
+            <div class="btn-group dropleft">
+              <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Nama User
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="profile.php">Profile</a>
+                <a class="dropdown-item" href="gantipass.php">Ganti Password</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="index.php">Sign Out</a>
+              </div>
+            </div>
+          </li>
+        </ul>
     </nav>
     <div class="col-md-12 col-sm-12">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
