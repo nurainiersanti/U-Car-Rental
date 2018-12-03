@@ -178,7 +178,7 @@
             <div class="form-grup">
             <div class="label">
               <label>Jenis Mobil</label></div>
-                <select  class="custom-select" name="jenis_mobil" required="required">
+                <select  class="custom-select" name="mobil_jenis" required="required">
                   <option value="Luxury cars">Luxury car</option>
                   <option value="Sedan cars">Sedan cars</option>
                   <option value="Mpv cars">Mvp cars</option>
@@ -190,7 +190,7 @@
             <div class="form-grup">
               <div class="label">
               <label>Durasi</label></div>
-                <select class="custom-select" name="durasi" required="required">
+                <select class="custom-select" name="durasi_pinjam" required="required">
                   <option value="1 Hari">1 Hari</option>
                   <option value="2 Hari">2 Hari</option>
                   <option value="3 Hari">3 Hari</option>

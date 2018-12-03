@@ -1,3 +1,34 @@
+<?php
+include 'conn.php';
+
+$status = '';
+//melakukan pengecekan apakah ada form yang dipost
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $Nama_pelanggan = $_POST['Nama_pelanggan'];
+    $Alamat_pelanggan = $_POST['Alamat_pelanggan'];
+    $KTP_pelanggan = $_POST['KTP_pelanggan'];
+    $Telp_pelanggan = $_POST['Telp_pelanggan'];
+    $Fasilitas = $_POST['Fasilitas'];
+    $Alamat_jemput = $_POST['Alamat_jemput'];
+    $Waktu_jemput = $_POST['Waktu_jemput'];
+    //query SQL
+    $query = "INSERT INTO penjemputan (Nama_pelanggan, Alamat_pelanggan, KTP_pelanggan, Telp_pelanggan, Fasilitas, Alamat_jemput, Waktu_jemput)
+    VALUES('$Nama_pelanggan','$Alamat_pelanggan','$KTP_pelanggan','$Telp_pelanggan','$Fasilitas','$Alamat_jemput','$Waktu_jemput')"; 
+
+    //eksekusi query
+    $result = mysqli_query(connection(),$query);
+    if ($result) {
+      $status = 'berhasil';
+    }
+    else{
+      $status = 'error';
+    }
+
+    header("location:konfirmasipembayaran.php");
+}
+
+
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -170,68 +201,54 @@
         </div>
     </div>
       <div class="form-container">
-        <form  action="konfirmasipembayaran.php" method="post" autocomplete="on" id="form1">
+        <form  action="pembayaran.php" method="POST" autocomplete="on" id="form1">
           <fieldset>
             <div class="form-grup">
               <div class="label">
               <label>Nama</label>
               </div>
-              <div class="input">
-                <input type="text" name="Nama" placeholder="Isikan nama anda" maxlength="30" autofocus>
-              </div>
+                <input class="form-control" type="text" name="Nama_pelanggan" placeholder="Isikan nama anda" maxlength="30" autofocus required="required">
             </div>
             <div class="form-grup">
               <div class="label">
               <label>Alamat</label>
               </div>
-              <div class="input">
-                <input type="text" name="alamat" placeholder="Isikan alamat anda" maxlength="30" autofocus>
-              </div>
+                <textarea class="form-control" type="text" name="Alamat_pelanggan" placeholder="Isikan alamat anda" maxlength="30" autofocus required="required"></textarea>
             </div>
             <div class="form-grup">
               <div class="label">
               <label>Nomor KTP</label>
               </div>
-              <div class="input">
-                <input type="text" name="Nomor KTP" placeholder="Isikan Nomor KTP anda" maxlength="30" autofocus>
-              </div>
+                <input class="form-control" type="text" name="KTP_pelanggan" placeholder="Isikan Nomor KTP anda" maxlength="30" autofocus required="required">
             </div>
             <div class="form-grup">
               <div class="label">
               <label>Nomor Telepon</label>
               </div>
-              <div class="input">
-                <input type="text" name="Nomor Telepon" placeholder="Isikan Nomor telepon anda" maxlength="30" autofocus>
-              </div>
+                <input class="form-control" type="text" name="Telp_pelanggan" placeholder="Isikan Nomor telepon anda" maxlength="30" autofocus required="required">
             </div>
             <div class="form-grup">
               <div class="label">
               <label>Fasilitas</label>
               </div>
-              <div class="input">
-                <select  name="Fasilitas">
+                <select class="custom-select" name="Fasilitas" required="required">
                   <option value="Supir">Supir</option>
                   <option value="Tanpa Supir">Tanpa Supir</option>
                   <option value="BBM">BBM</option>
                   <option value="Supir & BBM">Supir & BBM</option>
                 </select>
-              </div>
             </div>
             <div class="form-grup">
               <div class="label">
               <label>Alamat jemput</label>
               </div>
-              <div class="input">
-                <textarea name="Alamat jemput" placeholder="isi Alamat jemput anda"></textarea>
-              </div>
+                <textarea class="form-control" name="Alamat_jemput" placeholder="isi Alamat jemput anda" required="required"></textarea>
             </div>
             <div class="form-grup">
               <div class="label">
               <label>Waktu jemput</label>
               </div>
-              <div class="input">
-                <input type="time" name="Waktu jemput" placeholder="Isikan waktu jemput anda" maxlength="30" autofocus>
-              </div>
+                <input class="form-control" type="time" name="Waktu_jemput" placeholder="Isikan waktu jemput anda" maxlength="30" autofocus required="required">
             </div>
 
 

@@ -1,3 +1,9 @@
+<?php 
+  //memanggil file conn.php yang berisi koneski ke database
+  //dengan include, semua kode dalam file conn.php dapat digunakan pada file index.php
+  include ('conn.php'); 
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -196,9 +202,9 @@
                   </div>
                   <div class="form-grup">
                     <hr>
-                    <input type="checkbox" name="agree" value="1" form="form1">Data yang saya isi sudah benar/sesuai dengan yang saya inginkan.
+                    <input type="checkbox" name="agree" value="1" form="form1" required="required">Data yang saya isi sudah benar/sesuai dengan yang saya inginkan.
                     <br>
-                    <input type="checkbox" name="agree" value="2" form="form1">Saya setuju dengan peraturan yang sudah di tentukan oleh Ucar.
+                    <input type="checkbox" name="agree" value="2" form="form1" required="required">Saya setuju dengan peraturan yang sudah di tentukan oleh Ucar.
                   </div>
 
 
@@ -223,16 +229,28 @@
                       <label class="label">Kode Booking </label>
                       <h6>12345678 </h6>
                     </fieldset>
-                    <h4>Nama Penyewa </h4>
-                    <h6>Dwi Darma Ardiansyah </h6>
-                    <h4>Durasi </h4>
-                    <h6>7 Hari</h6>
-                    <h4>Tanggal Pinjam <h4>
-                    <h6>Desember 32, 2018</h6>
-                    <h4>Fasilitas <h4>
-                    <h6>Supir & BBM</h6>
-                    <h4>Mobil yang dipilih <h4>
-                    <h6>Limosin hitam 2015</h6>
+
+                    <?php 
+                  //proses menampilkan data dari database:
+                  //siapkan query SQL
+                  $query = "SELECT * FROM penjemputan";
+                  $result = mysqli_query(connection(),$query);
+                 ?>
+
+                 <?php while($data = mysqli_fetch_array($result)): ?>
+                 <div class="label">
+                    <label>Nama</label>
+                </div>
+                <div><?php echo $data['Nama_pelanggan']; ?></div>
+                    <td><?php echo $data['Alamat_pelanggan']; ?></td>
+                    <td><?php echo $data['KTP_pelanggan'];  ?></td>
+                    <td><?php echo $data['Telp_pelanggan'];  ?></td>
+                    <td><?php echo $data['Fasilitas'];  ?></td>
+                    <td><?php echo $data['Alamat_jemput'];  ?></td>
+                    <td><?php echo $data['Waktu_jemput']; ?></td>
+                  </tr>
+                 <?php endwhile ?>
+                 </tbody>
                   </div>
               </form>
             </div>
