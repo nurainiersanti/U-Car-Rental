@@ -47,7 +47,7 @@
                 <a class="dropdown-item" href="profile.php">Profile</a>
                 <a class="dropdown-item" href="gantipass.php">Ganti Password</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="index.php">Sign Out</a>
+                <a class="dropdown-item" href="logout.php"><i class="fa fa-sign-out">Sign Out</i></a>
               </div>
             </div>
           </li>

@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $query = "INSERT INTO pinjam (durasi_pinjam, tujuan_pergi, tgl_pinjam, mobil_jenis) VALUES('$durasi_pinjam','$tujuan_pergi','$tgl_pinjam','$mobil_jenis')"; 
 
     //eksekusi query
-    $result = mysqli_query(connection(),$query);
+    $result = $conn->query($query);
     if ($result) {
       $status = 'berhasil';
     }
