@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     VALUES('$Nama_pelanggan','$Alamat_pelanggan','$KTP_pelanggan','$Telp_pelanggan','$Fasilitas','$Alamat_jemput','$Waktu_jemput')"; 
 
     //eksekusi query
-    $result = mysqli_query(connection(),$query);
+    $result = $conn->query($query);
     if ($result) {
       $status = 'berhasil';
     }
