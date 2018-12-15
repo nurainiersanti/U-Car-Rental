@@ -50,59 +50,10 @@
     </nav>
     <div class="container">
     <div id="header">
-      <p>Home >> Profile </p>
       <h2>User Profile</h2>
     </div>
       <div class="form-container">
-        <form  action="profile.php" method="post" autocomplete="on" id="form1">
-          <fieldset>
-            <div class="form-grup">
-              <div class="label">
-              <label>Nama</label>
-              </div>
-              <div class="input">
-                <input type="text" name="nama" placeholder="Isikan Nama lengkap Anda" value="Dwi Darma Ardiansyah" maxlength="30" autofocus>
-              </div>
-            </div>
-            <div class="form-grup">
-              <div class="label">
-              <label>Username</label>
-              </div>
-              <div class="input">
-                <input type="text" name="username" placeholder="Isikan Username Anda" value="ardiganteng09" maxlength="30" autofocus>
-              </div>
-            </div>
-            <div class="form-grup">
-              <div class="label">
-              <label>Email</label>
-              </div>
-              <div class="input">
-                <input type="text" name="email" placeholder="Isikan Email Anda" value="dwidarmaganteng@gmail.com" maxlength="30" autofocus>
-              </div>
-            </div>
-            <div class="form-grup">
-              <div class="label">
-              <label>No Telepon</label>
-              </div>
-              <div class="input">
-                <input type="text" name="telepon" placeholder="Isikan No Telepon Anda" value="081239906939" maxlength="30" autofocus>
-              </div>
-            </div>
-            <div class="form-grup">
-              <div class="label">
-              <label>Alamat</label>
-              </div>
-              <div class="input">
-                <input type="text" name="alamat" placeholder="isi Alamat Lengkap Anda" value="Jln Rungkut Asri Timur XV No 12 Rungkut Surabaya" maxlength="100" autofocus >
-              </div>
-            </div>
-          </fieldset>
-
-          <div class="form-grup">
-            <button href="profile.php" type="submit" name="button" >Save</button>
-          </div>
-
-        </form>
+        
 
 
       </div>

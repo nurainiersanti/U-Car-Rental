@@ -7,8 +7,8 @@
   $alamat = $_POST['alamat'];
   $password = $_POST['password'];
   $conf_pass = $_POST['conf_pass'];
-  $ktp = $_POST['ktp'];
-  $sim = $_POST['sim'];
+  $ktp = $_FILES['ktp']['name'];
+  $sim = $_FILES['sim']['name'];
   $sql = "SELECT * FROM pelanggan WHERE username = '$username'";
   $query = $conn->query($sql);
   if($query->num_rows != 0) {
@@ -21,6 +21,8 @@
     } else {
       $data = "INSERT INTO pelanggan (nama, username, email, no_telp, alamat, password, conf_pass, ktp, sim) VALUES ('$nama', '$username', '$email', '$no_telp', '$alamat', '$password', '$conf_pass', '$ktp', '$sim')";
       $simpan = $conn->query($data);
+      move_uploaded_file($_FILES['ktp']['tmp_name'],'ktp/'.$ktp);
+      move_uploaded_file($_FILES['sim']['tmp_name'],'sim/'.$sim);
       if($simpan) {
         echo "<script>alert('Pendaftaran Berhasil, Silahkan Login')</script>";
       echo "<meta http-equiv='refresh' content='1 url=index.php'>";
