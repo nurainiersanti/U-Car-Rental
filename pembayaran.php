@@ -1,3 +1,11 @@
+<?php 
+  //memanggil file conn.php yang berisi koneski ke database
+  //dengan include, semua kode dalam file conn.php dapat digunakan pada file index.php
+  session_start();
+  require_once("conn.php");
+
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
