@@ -127,17 +127,16 @@
                     <?php 
                   //proses menampilkan data dari database:
                   //siapkan query SQL
-                  $query = "SELECT * FROM penjemputan";
+                  $query = "SELECT * FROM penjemputan WHERE  username = '$username'";
                   $result = $conn->query($query);
                  ?>
 
                  <?php while($data = mysqli_fetch_array($result)): ?>
                  <div class="label">
-                    <label>Nama</label>
                 </div>
                 <div><?php echo $data['Nama_pelanggan']; ?></div>
                     <td><?php echo $data['Alamat_pelanggan']; ?></td>
-                    <td><?php echo $data['KTP_pelanggan'];  ?></td>
+                    <td><?php echo $data['Nik_pelanggan'];  ?></td>
                     <td><?php echo $data['Telp_pelanggan'];  ?></td>
                     <td><?php echo $data['Fasilitas'];  ?></td>
                     <td><?php echo $data['Alamat_jemput'];  ?></td>
