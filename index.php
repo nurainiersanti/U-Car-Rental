@@ -53,7 +53,7 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <form action="daftar-proses.php" name="daftar" method="POST">
+                                <form action="daftar-proses.php" enctype="multipart/form-data" name="daftar" method="POST">
                                     <div class="form-group">
                                             <label for="name" class="col-form-label">Nama</label>
                                                 <input type="text" class="form-control" name="nama" placeholder="Nama Lengkap" required>
