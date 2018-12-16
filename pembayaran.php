@@ -1,34 +1,3 @@
-<?php
-include 'conn.php';
-
-$status = '';
-//melakukan pengecekan apakah ada form yang dipost
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $Nama_pelanggan = $_POST['Nama_pelanggan'];
-    $Alamat_pelanggan = $_POST['Alamat_pelanggan'];
-    $KTP_pelanggan = $_POST['KTP_pelanggan'];
-    $Telp_pelanggan = $_POST['Telp_pelanggan'];
-    $Fasilitas = $_POST['Fasilitas'];
-    $Alamat_jemput = $_POST['Alamat_jemput'];
-    $Waktu_jemput = $_POST['Waktu_jemput'];
-    //query SQL
-    $query = "INSERT INTO penjemputan (Nama_pelanggan, Alamat_pelanggan, KTP_pelanggan, Telp_pelanggan, Fasilitas, Alamat_jemput, Waktu_jemput)
-    VALUES('$Nama_pelanggan','$Alamat_pelanggan','$KTP_pelanggan','$Telp_pelanggan','$Fasilitas','$Alamat_jemput','$Waktu_jemput')"; 
-
-    //eksekusi query
-    $result = $conn->query($query);
-    if ($result) {
-      $status = 'berhasil';
-    }
-    else{
-      $status = 'error';
-    }
-
-    header("location:konfirmasipembayaran.php");
-}
-
-
-?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -95,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
     </div>
       <div class="form-container">
-        <form  action="pembayaran.php" method="POST" autocomplete="on" id="form1">
+        <form  action="pembayaran-aksi.php" method="POST">
           <fieldset>
             <div class="form-grup">
               <div class="label">
@@ -113,7 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
               <div class="label">
               <label>Nomor KTP</label>
               </div>
-                <input class="form-control" type="text" name="KTP_pelanggan" placeholder="Isikan Nomor KTP anda" maxlength="30" autofocus required="required">
+                <input class="form-control" type="text" name="Nik_pelanggan" placeholder="Isikan Nomor KTP anda" maxlength="30" autofocus required="required">
             </div>
             <div class="form-grup">
               <div class="label">

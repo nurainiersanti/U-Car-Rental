@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $tgl_pinjam = $_POST['tgl_pinjam'];
     $tgl_kembali = $_POST['tgl_kembali'];
     //query SQL
-    $query = "INSERT INTO penjemputan (tgl_pinjam, tgl_kembali) VALUES('$tgl_pinjam','$tgl_kembali')"; 
+    $query = "INSERT INTO pinjam (tgl_pinjam, tgl_kembali) VALUES('$tgl_pinjam','$tgl_kembali')"; 
 
     //eksekusi query
     $result = $conn->query($query);
