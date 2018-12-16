@@ -128,7 +128,7 @@
                   //proses menampilkan data dari database:
                   //siapkan query SQL
                   $query = "SELECT * FROM penjemputan";
-                  $result = mysqli_query(connection(),$query);
+                  $result = $conn->query($query);
                  ?>
 
                  <?php while($data = mysqli_fetch_array($result)): ?>
