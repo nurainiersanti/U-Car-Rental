@@ -121,7 +121,23 @@
                   <div class=" confirm form-grup">
                     <fieldset>
                       <label class="label">Kode Booking </label>
-                      <h6>12345678 </h6>
+                      <?php
+                        function acak($panjang)
+                        {
+                            $karakter= 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789';
+                            $string = '';
+                            for ($i = 0; $i < $panjang; $i++) {
+                          $pos = rand(0, strlen($karakter)-1);
+                          $string .= $karakter{$pos};
+                            }
+                            return $string;
+                        }
+                        //cara memanggilnya
+                        $hasil_1= acak(7);
+
+                        echo $hasil_1;
+
+                        ?>
                     </fieldset>
 
                     <?php 
