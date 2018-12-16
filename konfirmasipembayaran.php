@@ -154,7 +154,7 @@
                     <?php 
                   //proses menampilkan data dari database:
                   //siapkan query SQL
-                  $query = "SELECT * FROM penjemputan WHERE  username = '$username'";
+                  $query = "SELECT * FROM penjemputan WHERE no_booking='$no_booking'";
                   $result = $conn->query($query);
                  ?>
 
