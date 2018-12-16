@@ -36,7 +36,7 @@
           <li class="nav-item">
             <div class="btn-group dropleft">
               <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Nama User
+              <?php echo $data['nama'];  ?>
               </button>
               <div class="dropdown-menu">
                 <a class="dropdown-item" href="profile.php">Profile</a>
