@@ -171,50 +171,37 @@
         </div>
     </div>
       <div class="form-container">
-        <form  action="pesan-aksi.php" method="POST" autocomplete="on" id="form1">
+        <form  action="pilihmobil.php" method="POST" autocomplete="on" id="form1">
           <fieldset>
-            <div class="form-grup">
-            <div class="label">
-              <label>Jenis Mobil</label></div>
-                <select  class="custom-select" name="mobil_jenis" required="required">
-                  <option value="Luxury cars">Luxury car</option>
-                  <option value="Sedan cars">Sedan cars</option>
-                  <option value="Mpv cars">Mvp cars</option>
-                  <option value="Suv & Jeep cars">Suv & Jeep cars</option>
-                  <option value="Wedding cars">Wedding cars</option>
-                  <option value="Transporter & Bus">Transporter & Bus</option>
-                </select>
-            </div>
-            <div class="form-grup">
-              <div class="label">
-              <label>Durasi</label></div>
-                <select class="custom-select" name="durasi_pinjam" required="required">
-                  <option value="1 Hari">1 Hari</option>
-                  <option value="2 Hari">2 Hari</option>
-                  <option value="3 Hari">3 Hari</option>
-                  <option value="4 Hari">4 Hari</option>
-                  <option value="5 Hari">5 Hari</option>
-                  <option value="6 Hari">6 Hari</option>
-                  <option value="7 Hari">7 Hari</option>
-                </select>
-              </div>
-            <div class="form-grup">
-              <div class="label">
-              <label>Tujuan</label></div>
-                <input class="form-control" type="text" name="tujuan_pergi" placeholder="Isikan tujuan anda" maxlength="30" autofocus required="required">
-            </div>
-            <div class="form-grup">
-              <div class="label">
-              <label>Tanggal pinjam</label>
-              </div>
-                <input type="date" name="tgl_pinjam" required="required">
-            </div>
-
+            <div class="form-group">
+					            		<div class="row">
+					            			<div class="col-xs-12 col-sm-12">
+					            				<label class="control-label" for="from">Tanggal Pinjam</label>
+						     
+							                    <input class="form-control from" size="12" value="<?php echo (isset($_SESSION['from'])) ? $_SESSION['from'] : ''; ?>" data-date="" data-date-format="yyyy-mm-dd" data-link-field="any" data-link-format="yyyy-mm-dd" type="text" value=""  name="from" id="from">
+							                   
+						              		</div>
+						            	</div>
+						            </div>
+						            <div class="form-group">
+						            	<div class="row">
+					            			<div class="col-xs-12 col-sm-12">
+					            				<label class="control-label" for="to">Tanggal Kembali</label>
+						              			
+								                    <input class="form-control to" size="12" type="text" value="<?php echo (isset($_SESSION['to'])) ? $_SESSION['to'] : ''; ?>"  name="to" id="to" data-date="" data-date-format="yyyy-mm-dd" data-link-field="any" data-link-format="yyyy-mm-dd">
+								                   
+						              		</div>
+						            	</div>
+						            </div>
           </fieldset>
 
-          <div class="form-grup">
-            <button href="pilihmobil.php" type="submit" name="button" >Next</button>
-          </div>
+          <div class="form-group">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12">
+						<button type="submit" class="btn btn-primary" align="right"name="avail">Check</button>
+					</div>
+				</div>
+		</div>
 
         </form>
 
