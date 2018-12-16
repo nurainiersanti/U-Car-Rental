@@ -101,14 +101,14 @@
               <td><?php echo $data['alamat'];  ?></td>
               <td><?php echo $data['password'];  ?></td>
               <td class="align-middle text-center">
-                  <img src="assets/image/<?php echo $data['ktp']; ?>" width="633">
+                  <img src="asset/image/<?php echo $data['ktp']; ?>" width="633">
               </td>
               <td class="align-middle text-center">
-                  <img src="assets/image/<?php echo $data['sim']; ?>" width="633">
+                  <img src="asset/image/<?php echo $data['sim']; ?>" width="633">
               </td>
               
               <td>
-                  <a href="<?php echo "update.php?username=".$data['username']; ?>" class="btn btn-outline-warning btn-sm"> Update</a>
+                  <a href="<?php echo "profile-edit.php?username=".$data['username']; ?>" class="btn btn-outline-warning btn-sm"> Update</a>
                   &nbsp;&nbsp;
                   <a href="<?php echo "delete.php?username=".$data['username']; ?>" class="btn btn-outline-danger btn-sm"> Delete</a>
               </td>
