@@ -1,3 +1,15 @@
+<?php 
+  //memanggil file conn.php yang berisi koneski ke database
+  //dengan include, semua kode dalam file conn.php dapat digunakan pada file index.php
+  include ('conn.php'); 
+  session_start();
+  if (!isset($_SESSION['username'])){
+    header ("index.php");
+  }else { 
+   $username = $_SESSION['username']; 
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,6 +27,13 @@
     <script type="text/javascript" src="asset/js/style.js"></script>
   </head>
 <body>
+<?php 
+          //proses menampilkan data dari database:
+          //siapkan query SQL
+          $query = "SELECT * FROM pelanggan WHERE username = '$username'";
+          $result = $conn->query($query);
+      ?>
+      <?php while($data = mysqli_fetch_array($result)): ?>
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #FFFFFF;">
         <a class="navbar-brand" href="#">
             <img src="asset/image/ucar.png" width="150" height="30" class="rounded float-left" alt=" ">
@@ -41,7 +60,7 @@
           <li class="nav-item">
             <div class="btn-group dropleft">
               <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Nama User
+                <?php echo $data['nama'];  ?>
               </button>
               <div class="dropdown-menu">
                 <a class="dropdown-item" href="profile.php">Profile</a>
@@ -53,6 +72,7 @@
           </li>
         </ul>
     </nav>
+    <?php endwhile ?>
     <div class="col-md-12 col-sm-12">
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">

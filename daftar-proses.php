@@ -21,8 +21,8 @@
     } else {
       $data = "INSERT INTO pelanggan (nama, username, email, no_telp, alamat, password, conf_pass, ktp, sim) VALUES ('$nama', '$username', '$email', '$no_telp', '$alamat', '$password', '$conf_pass', '$ktp', '$sim')";
       $simpan = $conn->query($data);
-      move_uploaded_file($_FILES['ktp']['tmp_name'],'ktp/'.$ktp);
-      move_uploaded_file($_FILES['sim']['tmp_name'],'sim/'.$sim);
+      move_uploaded_file($_FILES['ktp']['tmp_name'],'img/'.$ktp);
+      move_uploaded_file($_FILES['sim']['tmp_name'],'img/'.$sim);
       if($simpan) {
         echo "<script>alert('Pendaftaran Berhasil, Silahkan Login')</script>";
       echo "<meta http-equiv='refresh' content='1 url=index.php'>";
