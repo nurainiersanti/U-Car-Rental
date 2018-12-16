@@ -4,12 +4,10 @@ include 'conn.php';
 $status = '';
 //melakukan pengecekan apakah ada form yang dipost
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $durasi_pinjam = $_POST['durasi_pinjam'];
-    $tujuan_pergi = $_POST['tujuan_pergi'];
     $tgl_pinjam = $_POST['tgl_pinjam'];
-    $mobil_jenis = $_POST['mobil_jenis'];
+    $tgl_kembali = $_POST['tgl_kembali'];
     //query SQL
-    $query = "INSERT INTO pinjam (durasi_pinjam, tujuan_pergi, tgl_pinjam, mobil_jenis) VALUES('$durasi_pinjam','$tujuan_pergi','$tgl_pinjam','$mobil_jenis')"; 
+    $query = "INSERT INTO penjemputan (tgl_pinjam, tgl_kembali) VALUES('$tgl_pinjam','$tgl_kembali')"; 
 
     //eksekusi query
     $result = $conn->query($query);

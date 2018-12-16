@@ -178,7 +178,7 @@
 					            			<div class="col-xs-12 col-sm-12">
 					            				<label class="control-label" for="from">Tanggal Pinjam</label>
 						     
-							                    <input class="form-control from" size="12" value="<?php echo (isset($_SESSION['from'])) ? $_SESSION['from'] : ''; ?>" data-date="" data-date-format="yyyy-mm-dd" data-link-field="any" data-link-format="yyyy-mm-dd" type="text" value=""  name="from" id="from">
+							                    <input class="form-control from" size="12" type="date" name="tgl_pinjam" required="required">
 							                   
 						              		</div>
 						            	</div>
@@ -186,9 +186,9 @@
 						            <div class="form-group">
 						            	<div class="row">
 					            			<div class="col-xs-12 col-sm-12">
-					            				<label class="control-label" for="to">Tanggal Kembali</label>
+					            				<label class="control-label">Tanggal Kembali</label>
 						              			
-								                    <input class="form-control to" size="12" type="text" value="<?php echo (isset($_SESSION['to'])) ? $_SESSION['to'] : ''; ?>"  name="to" id="to" data-date="" data-date-format="yyyy-mm-dd" data-link-field="any" data-link-format="yyyy-mm-dd">
+								                    <input class="form-control to" size="12" type="date" name="tgl_kembali" required="required">
 								                   
 						              		</div>
 						            	</div>
