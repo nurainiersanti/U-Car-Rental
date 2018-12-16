@@ -151,48 +151,24 @@
             <div class="form-container2">
               <form  action="verifikasipembayaran.php" method="post" autocomplete="on" id="form1">
                   <div class=" confirm form-grup">
-                    <fieldset>
-                      <label class="label">Kode Booking </label>
-                      <?php
-                        function acak($panjang)
-                        {
-                            $karakter= 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789';
-                            $string = '';
-                            for ($i = 0; $i < $panjang; $i++) {
-                          $pos = rand(0, strlen($karakter)-1);
-                          $string .= $karakter{$pos};
-                            }
-                            return $string;
-                        }
-                        //cara memanggilnya
-                        $hasil_1= acak(7);
-
-                        echo $hasil_1;
-
-                        ?>
-                    </fieldset>
-
                     <?php 
                   //proses menampilkan data dari database:
                   //siapkan query SQL
-                  $query = "SELECT * FROM penjemputan";
+                  $query = "SELECT * FROM penjemputan WHERE  username = '$username'";
                   $result = $conn->query($query);
                  ?>
 
                  <?php while($data = mysqli_fetch_array($result)): ?>
-                 <div class="label">
-                    <label>Nama</label>
-                </div>
-                <div><?php echo $data['Nama_pelanggan']; ?></div>
-                    <td><?php echo $data['Alamat_pelanggan']; ?></td>
-                    <td><?php echo $data['KTP_pelanggan'];  ?></td>
-                    <td><?php echo $data['Telp_pelanggan'];  ?></td>
-                    <td><?php echo $data['Fasilitas'];  ?></td>
-                    <td><?php echo $data['Alamat_jemput'];  ?></td>
-                    <td><?php echo $data['Waktu_jemput']; ?></td>
-                  </tr>
+                 <div class="label"></div>
+                    <div><?php echo $data['no_booking']; ?></div>
+                    <div><?php echo $data['Nama_pelanggan']; ?></div>
+                    <div><?php echo $data['Alamat_pelanggan']; ?></div>
+                    <div><?php echo $data['Nik_pelanggan'];  ?></div>
+                    <div><?php echo $data['Telp_pelanggan'];  ?></div>
+                    <div><?php echo $data['Fasilitas'];  ?></div>
+                    <div><?php echo $data['Alamat_jemput'];  ?></div>
+                    <div><?php echo $data['Waktu_jemput']; ?></div>
                  <?php endwhile ?>
-                 </tbody>
                   </div>
               </form>
             </div>
