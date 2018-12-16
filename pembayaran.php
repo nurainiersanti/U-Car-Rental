@@ -4,6 +4,14 @@
   session_start();
   require_once("conn.php");
 
+$query = "SELECT max(no_booking) as maxKode FROM penjemputan";
+$hasil = mysqli_query($conn,$query);
+$data = mysqli_fetch_array($hasil);
+$no_booking = $data['maxKode'];
+$noUrut = (int) substr($no_booking, 3, 3);
+$noUrut++;
+$char = "BKG";
+$no_booking = $char . sprintf("%03s", $noUrut);
 ?>
 
 <!doctype html>
@@ -82,6 +90,12 @@
       <div class="form-container">
         <form  action="pembayaran-aksi.php" method="POST">
           <fieldset>
+            <div class="form-grup">
+              <div class="label">
+                <label>No. Booking</label>
+            </div>
+              <input class="form-control" type="text" name="no_booking" value="<?php echo $no_booking;?>" readonly="readonly" maxlength="30" autofocus required="required">
+          </div>
             <div class="form-grup">
               <div class="label">
               <label>Nama</label>
