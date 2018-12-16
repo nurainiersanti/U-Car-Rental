@@ -13,6 +13,13 @@
     <title>Pembayaran</title>
   </head>
   <body>
+  <?php 
+          //proses menampilkan data dari database:
+          //siapkan query SQL
+          $query = "SELECT * FROM pelanggan WHERE username = '$username'";
+          $result = $conn->query($query);
+      ?>
+      <?php while($data = mysqli_fetch_array($result)): ?>
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #FFFFFF;">
         <a class="navbar-brand" href="#">
             <img src="asset/image/ucar.png" width="150" height="30" class="rounded float-left" alt=" ">
@@ -48,6 +55,7 @@
           </li>
         </ul>
     </nav>
+    <?php endwhile ?>
     <div class="container">
     <div id="header">
       <h2>Pembayaran</h2>
