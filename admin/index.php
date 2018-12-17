@@ -33,9 +33,6 @@
                 <a class="nav-link active" href="<?php echo "index.php"; ?>">Data Order Pelanggan</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="<?php echo "form.php"; ?>">Input Data Order Pelanggan</a>
-              </li>
-              <li class="nav-item">
                 <a class="nav-link" href="<?php echo "logout.php"; ?>">Logout</a>
               </li>
             </ul>
