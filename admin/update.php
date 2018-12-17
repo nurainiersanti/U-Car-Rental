@@ -96,40 +96,40 @@
 
             <div class="form-group">
               <label>No Ktp</label>
-              <input type="text" class="form-control" value="<?php echo $data['No_Ktp'];  ?>" name="No_Ktp" required="required" readonly>
+              <input type="text" class="form-control" value="<?php echo $data['No_Ktp']  ?>" name="No_Ktp" required="required" readonly>
             </div>
 
             <div class="form-group">
               <label>Nama Pelanggan</label>
-              <input type="text" class="form-control" placeholder="Nama Pelanggan" name="Nama_Pelanggan" required="required">
+              <input type="text" class="form-control" value="<?php echo $data['Nama_Pelanggan']  ?>" name="Nama_Pelanggan" required="required">
             </div>
 
             <div class="form-group">
               <label>Alamat Pelanggan</label>
-              <textarea class="form-control" name="Alamat_Pelanggan" required="required"></textarea>
+              <textarea class="form-control" value="<?php echo $data['Alamat_Pelanggan']  ?>" name="Alamat_Pelanggan" required="required"></textarea>
             </div>
 
             <div class="form-group">
               <label>No Telp</label>
-              <input type="text" class="form-control" placeholder="No Telp" name="No_Telp_Pelanggan" required="required">
+              <input type="text" class="form-control" value="<?php echo $data['No_Telp_Pelanggan']  ?>" name="No_Telp_Pelanggan" required="required">
             </div>
 
             <div class="form-grup">
               <div class="label">
               <label>Tanggal pinjam</label>
               </div>
-                <input type="date" name="Tanggal_Pinjam" required="required">
+                <input type="date" value="<?php echo $data['Tanggal_pinjam']  ?>" name="Tanggal_Pinjam" required="required">
             </div>
 
             <div class="form-group">
               <label>Tujuan</label>
-              <input type="text" class="form-control" placeholder="Tujuan" name="Tujuan" required="required">
+              <input type="text" class="form-control" value="<?php echo $data['Tujuan']  ?>" name="Tujuan" required="required">
             </div>
 
             <div class="form-grup">
               <div class="label">
               <label>Durasi Pinjam</label></div>
-                <select class="custom-select" name="Durasi_Pinjam" required="required">
+                <select class="custom-select" value="<?php echo $data['Durasi_Pinjam']  ?>" name="Durasi_Pinjam" required="required">
                   <option value="1 Hari">1 Hari</option>
                   <option value="2 Hari">2 Hari</option>
                   <option value="3 Hari">3 Hari</option>
@@ -142,26 +142,26 @@
 
               <div class="form-group">
               <label>Jenis Mobil</label>
-              <input type="text" class="form-control" placeholder="Jenis Mobil" name="Jenis_Mobil" required="required">
+              <input type="text" class="form-control" value="<?php echo $data['Jenis_Mobil']  ?>" name="Jenis_Mobil" required="required">
             </div>
 
             <div class="form-group">
               <label>Alamat Penjemputan</label>
-              <textarea class="form-control" name="Alamat_Penjemputan" required="required"></textarea>
+              <textarea class="form-control" value="<?php echo $data['Alamat_Penjemputan']  ?>" name="Alamat_Penjemputan" required="required"></textarea>
             </div>
 
             <div class="form-grup">
               <div class="label">
               <label>Waktu jemput</label>
               </div>
-                <input class="form-control" type="time" name="Waktu_Jemput" placeholder="Isikan waktu jemput anda" maxlength="30" autofocus required="required">
+                <input class="form-control" type="time" name="Waktu_Jemput" value="<?php echo $data['Waktu_Jemput']  ?>" maxlength="30" autofocus required="required">
             </div>
 
             <div class="form-grup">
               <div class="label">
               <label>Fasilitas</label>
               </div>
-                <select class="custom-select" name="Fasilitas" required="required">
+                <select class="custom-select" value="<?php echo $data['Fasilitas']  ?>" name="Fasilitas" required="required">
                   <option value="Supir">Supir</option>
                   <option value="Tanpa Supir">Tanpa Supir</option>
                   <option value="BBM">BBM</option>
@@ -171,7 +171,7 @@
 
             <div class="form-group">
               <label>Jenis Pembayaran</label>
-              <select class="custom-select" name="Jenis_Pembayaran" required="required">
+              <select class="custom-select" value="<?php echo $data['Jenis_Pembayaran']  ?>" name="Jenis_Pembayaran" required="required">
                 <option value="">Pilih Salah Satu</option>
                 <option value="L">BCA</option>
                 <option value="P">BNI</option>
@@ -183,7 +183,7 @@
 
             <div class="form-group">
               <label>Jumlah Pembayaran</label>
-              <textarea class="form-control" name="Jumlah_Pembayaran" required="required"></textarea>
+              <textarea class="form-control" value="<?php echo $data['Jumlah_Pembayaran']  ?>" name="Jumlah_Pembayaran" required="required"></textarea>
             </div>
 
             <?php endwhile; ?>
