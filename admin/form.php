@@ -101,7 +101,7 @@
               <div class="label">
               <label>Tanggal pinjam</label>
               </div>
-                <input type="date" name="Tanggal_Pinjam" required="required">
+                <input type="date" name="Tanggal_pinjam" required="required">
             </div>
 
             <div class="form-group">
@@ -156,11 +156,11 @@
               <label>Jenis Pembayaran</label>
               <select class="custom-select" name="Jenis_Pembayaran" required="required">
                 <option value="">Pilih Salah Satu</option>
-                <option value="L">BCA</option>
-                <option value="P">BNI</option>
-                <option value="P">BRI</option>
-                <option value="P">Mandiri</option>
-                <option value="P">Bank Lainnya</option>
+                <option value="BCA">BCA</option>
+                <option value="BNI">BNI</option>
+                <option value="BRI">BRI</option>
+                <option value="Mandiri">Mandiri</option>
+                <option value="Bank Lainnya">Bank Lainnya</option>
               </select>
             </div>
 

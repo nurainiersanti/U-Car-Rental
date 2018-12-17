@@ -1,7 +1,14 @@
 <?php 
-  //memanggil file conn.php yang berisi koneski ke database
-  //dengan include, semua kode dalam file conn.php dapat digunakan pada file index.php
-  include ('conn.php'); 
+ //memanggil file conn.php yang berisi koneski ke database
+ //dengan include, semua kode dalam file conn.php dapat digunakan pada file index.php
+ session_start();
+ require_once("conn.php");
+ if(!isset($_SESSION['username'])) {
+   header('location:login.php'); 
+ } else { 
+   $username = $_SESSION['username']; 
+ }
+?>
 ?>
 <!DOCTYPE html>
 <html>

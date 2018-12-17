@@ -150,7 +150,11 @@
                     <?php 
                   //proses menampilkan data dari database:
                   //siapkan query SQL
+<<<<<<< HEAD
                   $query = "SELECT * FROM penjemputan WHERE no_booking = '$no_booking'";
+=======
+                  $query = "SELECT * FROM penjemputan WHERE no_booking='$no_booking'";
+>>>>>>> 2fb2372f23189524e3e4522be9d5167a66907584
                   $result = $conn->query($query);
                  ?>
 
