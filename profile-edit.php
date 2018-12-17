@@ -2,9 +2,7 @@
   //memanggil file conn.php yang berisi koneski ke database
   //dengan include, semua kode dalam file conn.php dapat digunakan pada file index.php
   include ('conn.php'); 
-
   $status = '';
-  $result = '';
   //melakukan pengecekan apakah ada variable GET yang dikirim
   if ($_SERVER['REQUEST_METHOD'] === 'GET') {
       if (isset($_GET['username'])) {
@@ -43,7 +41,6 @@
       //redirect ke halaman lain
       header('Location: home.php?status='.$status);
   }
-  
 
 ?>
 
@@ -107,20 +104,21 @@
           </li>
         </ul>
     </nav>
-    
+<?php endwhile;?>
     <div class="container">
         <div id="header" style="margin-top:50px;">
             <h2>User Profile</h2>
         </div>
     <div class="jumbotron" style="margin-top:30px;">
+    
         <form action="profile-edit.php" name="daftar" method="POST">
                                     <div class="form-group">
                                             <label for="name" class="col-form-label">Nama</label>
-                                                <input type="text" class="form-control" name="nama" placeholder="Nama Lengkap" value="<?php echo $data['nama'];  ?>" required>
+                                                <input type="text"  readonly class="form-control" name="nama" placeholder="Nama Lengkap" value="<?php echo $data['nama'];  ?>" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="uname" class="col-form-label">Username</label>
-                                            <input type="text" class="form-control" name="username" placeholder="Username" value="<?php echo $data['username'];  ?>" required>
+                                            <input type="text" readonly class="form-control" name="username" placeholder="<?php echo $data['username'];  ?>" value="<?php echo $data['username'];  ?>">
                                             <div class="invalid-tooltip">
                                                 Harus Diisi.
                                             </div>
@@ -176,7 +174,7 @@
                                                     <div class="invalid-feedback">Example invalid custom file feedback</div>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <button type="submit" class="btn btn-primary">Daftar</button>
+                                                    <button type="submit" class="btn btn-primary">Update</button>
                                                 </div>
                                             </form>
 </div>

@@ -110,7 +110,6 @@
               <td>
                   <a href="<?php echo "profile-edit.php?username=".$data['username']; ?>" class="btn btn-outline-warning btn-sm"> Update</a>
                   &nbsp;&nbsp;
-                  <a href="<?php echo "delete.php?username=".$data['username']; ?>" class="btn btn-outline-danger btn-sm"> Delete</a>
               </td>
           </tr>
       <?php endwhile ?>
