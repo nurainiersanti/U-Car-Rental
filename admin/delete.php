@@ -1,6 +1,6 @@
-<?php 
+<?php
 
-  include ('conn.php'); 
+  include ('conn.php');
 
   $status = '';
   $result = '';
@@ -23,5 +23,5 @@
 
           //redirect ke halaman lain
           header('Location: index.php?status='.$status);
-      }  
+      }
   }

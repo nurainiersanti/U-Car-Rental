@@ -1,12 +1,12 @@
-<?php 
+<?php
  //memanggil file conn.php yang berisi koneski ke database
  //dengan include, semua kode dalam file conn.php dapat digunakan pada file index.php
  session_start();
  require_once("conn.php");
  if(!isset($_SESSION['username_admin'])) {
-   header('location:login.php'); 
- } else { 
-   $username = $_SESSION['username_admin']; 
+   header('location:login.php');
+ } else {
+   $username = $_SESSION['username_admin'];
  }
 ?>
 
@@ -43,7 +43,7 @@
         </nav>
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-          <?php 
+          <?php
             //mengecek apakah proses update dan delete sukses/gagal
             if (@$_GET['status']!==NULL) {
               $status = $_GET['status'];
@@ -78,7 +78,7 @@
                 </tr>
               </thead>
               <tbody>
-                <?php 
+                <?php
                   //proses menampilkan data dari database:
                   //siapkan query SQL
                   $query = "SELECT * FROM data_order_pelanggan";
