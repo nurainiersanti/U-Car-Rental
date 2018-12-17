@@ -1,7 +1,7 @@
-<?php 
+<?php
   //memanggil file conn.php yang berisi koneski ke database
   //dengan include, semua kode dalam file conn.php dapat digunakan pada file index.php
-  include ('conn.php'); 
+  include ('conn.php');
 
   $status = '';
   $result = '';
@@ -9,12 +9,12 @@
   if ($_SERVER['REQUEST_METHOD'] === 'GET') {
       if (isset($_GET['No_Ktp'])) {
           //query SQL
-          $nrp_upd = $_GET['No_Ktp'];
-          $query = "SELECT * FROM data_order_pelanggan WHERE No_Ktp = '$No_Ktp_upd'"; 
+          $No_Ktp_upd = $_GET['No_Ktp'];
+          $query = "SELECT * FROM data_order_pelanggan WHERE No_Ktp = '$No_Ktp_upd'";
 
           //eksekusi query
           $result = mysqli_query(connection(),$query);
-      }  
+      }
   }
 
   //melakukan pengecekan apakah ada form yang dipost
@@ -29,12 +29,12 @@
     $Jenis_Mobil = $_POST['Jenis_Mobil'];
     $Alamat_Penjemputan = $_POST['Alamat_Penjemputan'];
     $Waktu_Jemput = $_POST['Waktu_Jemput'];
-    $Jenis_Pembayaran = $_POST['Jenis_Pembayaran'];
+    $Jenis_Peqmbayaran = $_POST['Jenis_Pembayaran'];
     $Jumlah_Pembayaran = $_POST['Jumlah_Pembayaran'];
     $Fasilitas = $_POST['Fasilitas'];
       //query SQL
-      $sql = "UPDATE data_order_pelanggan SET No_Ktp='$No_Ktp', Nama_Pelanggan='$Nama_Pelanggan', Alamat_Pelanggan='$Alamat_Pelanggan',  
-      No_Telp_Pelanggan='$No_Telp_Pelanggan', Tanggal_pinjam='$Tanggal_pinjam', Tujuan='$Tujuan', Durasi_Pinjam='$Durasi_Pinjam', 
+      $sql = "UPDATE data_order_pelanggan SET Nama_Pelanggan='$Nama_Pelanggan', Alamat_Pelanggan='$Alamat_Pelanggan',
+      No_Telp_Pelanggan='$No_Telp_Pelanggan', Tanggal_pinjam='$Tanggal_pinjam', Tujuan='$Tujuan', Durasi_Pinjam='$Durasi_Pinjam',
       Jenis_Mobil='$Jenis_Mobil', Alamat_Penjemputan='$Alamat_Penjemputan', Waktu_Jemput='$Waktu_Jemput', Fasilitas='$Fasilitas',
       Jenis_Pembayaran='$Jenis_Pembayaran', Jumlah_Pembayaran='$Jumlah_Pembayaran' WHERE No_Ktp='$No_Ktp'";
 
@@ -50,7 +50,7 @@
       //redirect ke halaman lain
       header('Location: index.php?status='.$status);
   }
-  
+
 
 ?>
 
@@ -85,12 +85,12 @@
         </nav>
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-          
+
 
           <h2 style="margin: 30px 0 30px 0;">Update Data Order Pelanggan</h2>
           <form action="update.php" method="POST">
             <?php while($data = mysqli_fetch_array($result)): ?>
-            
+
             <div class="form-group">
               <label>No Ktp</label>
               <input type="text" class="form-control" placeholder="No KTP Pelanggan" name="No_Ktp" required="required">

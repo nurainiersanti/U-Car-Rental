@@ -1,12 +1,12 @@
-<?php 
+<?php
  //memanggil file conn.php yang berisi koneski ke database
  //dengan include, semua kode dalam file conn.php dapat digunakan pada file index.php
  session_start();
  require_once("conn.php");
  if(!isset($_SESSION['username_admin'])) {
-   header('location:login.php'); 
- } else { 
-   $username = $_SESSION['username_admin']; 
+   header('location:login.php');
+ } else {
+   $username = $_SESSION['username_admin'];
  }
 ?>
 
@@ -40,7 +40,7 @@
         </nav>
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-          <?php 
+          <?php
             //mengecek apakah proses update dan delete sukses/gagal
             if (@$_GET['status']!==NULL) {
               $status = $_GET['status'];
@@ -75,7 +75,7 @@
                 </tr>
               </thead>
               <tbody>
-                <?php 
+                <?php
                   //proses menampilkan data dari database:
                   //siapkan query SQL
                   $query = "SELECT * FROM data_order_pelanggan";
@@ -98,9 +98,9 @@
                     <td><?php echo $data['Jenis_Pembayaran'];  ?></td>
                     <td><?php echo $data['Jumlah_Pembayaran'];  ?></td>
                     <td>
-                      <a href="<?php echo "update.php?nrp=".$data['No_Ktp']; ?>" class="btn btn-outline-warning btn-sm"> Update</a>
+                      <a href="<?php echo "update.php?No_Ktp=".$data['No_Ktp']; ?>" class="btn btn-outline-warning btn-sm"> Update</a>
                       &nbsp;&nbsp;
-                      <a href="<?php echo "delete.php?nrp=".$data['No_Ktp']; ?>" class="btn btn-outline-danger btn-sm"> Delete</a>
+                      <a href="<?php echo "delete.php?No_Ktp=".$data['No_Ktp']; ?>" class="btn btn-outline-danger btn-sm"> Delete</a>
                     </td>
                   </tr>
                  <?php endwhile ?>
