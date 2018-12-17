@@ -33,9 +33,12 @@
                 <a class="nav-link active" href="<?php echo "index.php"; ?>">Data Order Pelanggan</a>
               </li>
               <li class="nav-item">
+<<<<<<< HEAD
                 <a class="nav-link" href="<?php echo "datauser.php"; ?>">Data Pelanggan</a>
               </li>
               <li class="nav-item">
+=======
+>>>>>>> 6f394a08ecc34426081a543f0bcbb9a54be93888
                 <a class="nav-link" href="<?php echo "logout.php"; ?>">Logout</a>
               </li>
             </ul>
