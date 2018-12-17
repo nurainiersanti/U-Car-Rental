@@ -96,7 +96,7 @@
 
             <div class="form-group">
               <label>No Ktp</label>
-              <input type="text" class="form-control" placeholder="No KTP Pelanggan" name="No_Ktp" required="required">
+              <input type="text" class="form-control" value="<?php echo $data['No_Ktp'];  ?>" name="No_Ktp" required="required" readonly>
             </div>
 
             <div class="form-group">
