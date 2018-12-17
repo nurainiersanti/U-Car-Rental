@@ -9,7 +9,7 @@
    if($query->num_rows == 0) {
      echo "<div align='center'>Username Belum Terdaftar! <a href='login.php'>Back</a></div>";
    } else {
-     if($pass <> $hasil['password']) {
+     if($password <> $hasil['password']) {
        echo "<div align='center'>Password salah! <a href='login.php'>Back</a></div>";
      } else {
        $_SESSION['username_admin'] = $hasil['username_admin'];
