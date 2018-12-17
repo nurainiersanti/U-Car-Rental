@@ -1,3 +1,14 @@
+<?php 
+  //memanggil file conn.php yang berisi koneski ke database
+  //dengan include, semua kode dalam file conn.php dapat digunakan pada file index.php
+  include ('conn.php'); 
+  session_start();
+  if (!isset($_SESSION['username'])){
+    header ("index.php");
+  }else { 
+   $username = $_SESSION['username']; 
+  }
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -14,6 +25,13 @@
     <title>Pesan Mobil</title>
   </head>
   <body>
+  <?php 
+          //proses menampilkan data dari database:
+          //siapkan query SQL
+          $query = "SELECT * FROM pelanggan WHERE username = '$username'";
+          $result = $conn->query($query);
+      ?>
+      <?php while($data = mysqli_fetch_array($result)): ?>
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #FFFFFF;">
         <a class="navbar-brand" href="index.php">
             <img src="asset/image/ucar.png" width="150" height="30" class="rounded float-left" alt=" ">
@@ -48,6 +66,7 @@
           </li>
         </ul>
                 </nav>
+                <?php endwhile ?>
     <div class="container">
     <div id="header">
       <h2>Pesan Mobil</h2>

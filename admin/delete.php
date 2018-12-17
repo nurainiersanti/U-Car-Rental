@@ -6,10 +6,10 @@
   $result = '';
   //melakukan pengecekan apakah ada form yang dipost
   if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-      if (isset($_GET['No_ktp'])) {
+      if (isset($_GET['no_booking'])) {
           //query SQL
-          $nrp_upd = $_GET['No_ktp'];
-          $query = "DELETE FROM data_order_pelanggan WHERE No_ktp = '$No_ktp_upd'"; 
+          $no_booking_upd = $_GET['no_booking'];
+          $query = "DELETE FROM penjemputan WHERE no_booking = '$no_booking_upd'"; 
 
           //eksekusi query
           $result = mysqli_query(connection(),$query);

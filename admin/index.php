@@ -33,7 +33,7 @@
                 <a class="nav-link active" href="<?php echo "index.php"; ?>">Data Order Pelanggan</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="<?php echo "form.php"; ?>">Input Data Order Pelanggan</a>
+                <a class="nav-link" href="<?php echo "datauser.php"; ?>">Data Pelanggan</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="<?php echo "logout.php"; ?>">Logout</a>
@@ -61,19 +61,14 @@
             <table class="table table-striped table-sm">
               <thead>
                 <tr>
-                  <th>No.Ktp</th>
+                  <th>No.Booking</th>
                   <th>Nama</th>
                   <th>Alamat</th>
-                  <th>No.Telp</th>
-                  <th>Tanggal Pinjam</th>
-                  <th>Tujuan</th>
-                  <th>Durasi Pinjam</th>
-                  <th>Jenis Mobil</th>
+                  <th>No.KTP</th>
+                  <th>Telp</th>
+                  <th>Fasilitas</th>
                   <th>Alamat Jemput</th>
                   <th>Waktu Jemput</th>
-                  <th>Fasilitas</th>
-                  <th>Jenis Pembayaran</th>
-                  <th>Jumlah Pembayaran</th>
                   <th>Pilihan</th>
                 </tr>
               </thead>
@@ -81,29 +76,23 @@
                 <?php
                   //proses menampilkan data dari database:
                   //siapkan query SQL
-                  $query = "SELECT * FROM data_order_pelanggan";
+                  $query = "SELECT * FROM penjemputan";
                   $result = mysqli_query(connection(),$query);
                  ?>
 
                  <?php while($data = mysqli_fetch_array($result)): ?>
                   <tr>
-                    <td><?php echo $data['No_Ktp'];  ?></td>
-                    <td><?php echo $data['Nama_Pelanggan'];  ?></td>
-                    <td><?php echo $data['Alamat_Pelanggan'];  ?></td>
-                    <td><?php echo $data['No_Telp_Pelanggan'];  ?></td>
-                    <td><?php echo $data['Tanggal_pinjam'];  ?></td>
-                    <td><?php echo $data['Tujuan'];  ?></td>
-                    <td><?php echo $data['Durasi_Pinjam'];  ?></td>
-                    <td><?php echo $data['Jenis_Mobil'];  ?></td>
-                    <td><?php echo $data['Alamat_Penjemputan'];  ?></td>
-                    <td><?php echo $data['Waktu_Jemput'];  ?></td>
+                    <td><?php echo $data['no_booking'];  ?></td>
+                    <td><?php echo $data['Nama_pelanggan'];  ?></td>
+                    <td><?php echo $data['Alamat_pelanggan'];  ?></td>
+                    <td><?php echo $data['Nik_Pelanggan'];  ?></td>
+                    <td><?php echo $data['Telp_pelanggan'];  ?></td>
                     <td><?php echo $data['Fasilitas'];  ?></td>
-                    <td><?php echo $data['Jenis_Pembayaran'];  ?></td>
-                    <td><?php echo $data['Jumlah_Pembayaran'];  ?></td>
+                    <td><?php echo $data['Alamat_jemput'];  ?></td>
+                    <td><?php echo $data['Waktu_jemput'];  ?></td>
+                    
                     <td>
-                      <a href="<?php echo "update.php?No_Ktp=".$data['No_Ktp']; ?>" class="btn btn-outline-warning btn-sm"> Update</a>
-                      &nbsp;&nbsp;
-                      <a href="<?php echo "delete.php?No_Ktp=".$data['No_Ktp']; ?>" class="btn btn-outline-danger btn-sm"> Delete</a>
+                      <a href="<?php echo "delete.php?no_booking=".$data['no_booking']; ?>" class="btn btn-outline-danger btn-sm"> Delete</a>
                     </td>
                   </tr>
                  <?php endwhile ?>
