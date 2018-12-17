@@ -3,23 +3,21 @@
   //dengan include, semua kode dalam file conn.php dapat digunakan pada file index.php
   session_start();
   require_once("conn.php");
-  $status = '';
-  //melakukan pengecekan apakah ada form yang dipost
-  if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-      $no_booking = $_POST['no_booking'];
-      //query SQL
-      $query = "INSERT INTO penjemputan (no_booking) VALUES('$no_booking')"; 
 
-      //eksekusi query
-      $result = $conn->query($query);
-      if ($result) {
-        $status = 'ok';
-      }
-      else{
-        $status = 'err';
-      }
-    }
+?>
 
+<?php 
+  //memanggil file conn.php yang berisi koneski ke database
+  //dengan include, semua kode dalam file conn.php dapat digunakan pada file index.php
+
+$query = "SELECT max(no_booking) as maxKode FROM penjemputan";
+$hasil = mysqli_query($conn,$query);
+$data = mysqli_fetch_array($hasil);
+$no_booking = $data['maxKode'];
+$noUrut = (int) substr($no_booking, 3, 3);
+$noUrut++;
+$char = "BKG";
+$no_booking = $char . sprintf("%03s", $noUrut);
 ?>
 
 
@@ -45,8 +43,8 @@
   <?php 
           //proses menampilkan data dari database:
           //siapkan query SQL
-          $query = "SELECT * FROM pelanggan WHERE no_booking = '$no_booking'";
-          $result = $conn->query($query);
+          $query = "SELECT * FROM pelanggan WHERE username = '$username'";
+          $result = mysqli_query($conn,$query);
       ?>
       <?php while($data = mysqli_fetch_array($result)): ?>
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #FFFFFF;">
@@ -150,12 +148,8 @@
                     <?php 
                   //proses menampilkan data dari database:
                   //siapkan query SQL
-<<<<<<< HEAD
-                  $query = "SELECT * FROM penjemputan WHERE no_booking = '$no_booking'";
-=======
-                  $query = "SELECT * FROM penjemputan WHERE no_booking='$no_booking'";
->>>>>>> 2fb2372f23189524e3e4522be9d5167a66907584
-                  $result = $conn->query($query);
+                  $query = "SELECT * FROM penjemputan WHERE no_booking = '".$no_booking."'";
+                  $result = mysqli_query($conn,$query);
                  ?>
 
                  <?php while($data = mysqli_fetch_array($result)): ?>
@@ -163,7 +157,7 @@
                     <div><?php echo $data['no_booking']; ?></div>
                     <div><?php echo $data['Nama_pelanggan']; ?></div>
                     <div><?php echo $data['Alamat_pelanggan']; ?></div>
-                    <div><?php echo $data['Nik_pelanggan'];  ?></div>
+                    <div><?php echo $data['Nik_Pelanggan'];  ?></div>
                     <div><?php echo $data['Telp_pelanggan'];  ?></div>
                     <div><?php echo $data['Fasilitas'];  ?></div>
                     <div><?php echo $data['Alamat_jemput'];  ?></div>
