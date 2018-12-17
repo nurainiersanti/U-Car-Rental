@@ -3,13 +3,13 @@
  //dengan include, semua kode dalam file conn.php dapat digunakan pada file index.php
  session_start();
  require_once("conn.php");
- if(!isset($_SESSION['username'])) {
+ if(!isset($_SESSION['username_admin'])) {
    header('location:login.php'); 
  } else { 
-   $username = $_SESSION['username']; 
+   $username = $_SESSION['username_admin']; 
  }
 ?>
-?>
+
 <!DOCTYPE html>
 <html>
   <head>
