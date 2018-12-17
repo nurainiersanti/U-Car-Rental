@@ -9,7 +9,7 @@
   if ($_SERVER['REQUEST_METHOD'] === 'GET') {
       if (isset($_GET['No_Ktp'])) {
           //query SQL
-          $nrp_upd = $_GET['No_Ktp'];
+          $No_Ktp_upd = $_GET['No_Ktp'];
           $query = "SELECT * FROM data_order_pelanggan WHERE No_Ktp = '$No_Ktp_upd'"; 
 
           //eksekusi query
@@ -33,7 +33,7 @@
     $Jumlah_Pembayaran = $_POST['Jumlah_Pembayaran'];
     $Fasilitas = $_POST['Fasilitas'];
       //query SQL
-      $sql = "UPDATE data_order_pelanggan SET No_Ktp='$No_Ktp', Nama_Pelanggan='$Nama_Pelanggan', Alamat_Pelanggan='$Alamat_Pelanggan',  
+      $sql = "UPDATE data_order_pelanggan SET Nama_Pelanggan='$Nama_Pelanggan', Alamat_Pelanggan='$Alamat_Pelanggan',  
       No_Telp_Pelanggan='$No_Telp_Pelanggan', Tanggal_pinjam='$Tanggal_pinjam', Tujuan='$Tujuan', Durasi_Pinjam='$Durasi_Pinjam', 
       Jenis_Mobil='$Jenis_Mobil', Alamat_Penjemputan='$Alamat_Penjemputan', Waktu_Jemput='$Waktu_Jemput', Fasilitas='$Fasilitas',
       Jenis_Pembayaran='$Jenis_Pembayaran', Jumlah_Pembayaran='$Jumlah_Pembayaran' WHERE No_Ktp='$No_Ktp'";
@@ -173,11 +173,11 @@
               <label>Jenis Pembayaran</label>
               <select class="custom-select" name="Jenis_Pembayaran" required="required">
                 <option value="">Pilih Salah Satu</option>
-                <option value="L">BCA</option>
-                <option value="P">BNI</option>
-                <option value="P">BRI</option>
-                <option value="P">Mandiri</option>
-                <option value="P">Bank Lainnya</option>
+                <option value="BCA">BCA</option>
+                <option value="BNI">BNI</option>
+                <option value="BRI">BRI</option>
+                <option value="Mandiri">Mandiri</option>
+                <option value="Bank Lainnya">Bank Lainnya</option>
               </select>
             </div>
 

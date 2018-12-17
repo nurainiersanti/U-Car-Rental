@@ -118,9 +118,6 @@
             </div>
 
           </div>
-          <div class="form-grup">
-            <button type="submit" name="button">Saya Sudah Melakukan Pembayaran</button>
-          </div>
           </div>
 
 

@@ -101,9 +101,9 @@
                     <td><?php echo $data['Jenis_Pembayaran'];  ?></td>
                     <td><?php echo $data['Jumlah_Pembayaran'];  ?></td>
                     <td>
-                      <a href="<?php echo "update.php?nrp=".$data['No_Ktp']; ?>" class="btn btn-outline-warning btn-sm"> Update</a>
+                      <a href="<?php echo "update.php?No_Ktp=".$data['No_Ktp']; ?>" class="btn btn-outline-warning btn-sm"> Update</a>
                       &nbsp;&nbsp;
-                      <a href="<?php echo "delete.php?nrp=".$data['No_Ktp']; ?>" class="btn btn-outline-danger btn-sm"> Delete</a>
+                      <a href="<?php echo "delete.php?No_Ktp=".$data['No_Ktp']; ?>" class="btn btn-outline-danger btn-sm"> Delete</a>
                     </td>
                   </tr>
                  <?php endwhile ?>
