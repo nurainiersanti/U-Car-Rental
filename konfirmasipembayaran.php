@@ -6,9 +6,9 @@
   $status = '';
   //melakukan pengecekan apakah ada form yang dipost
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-      $kode = $_POST['kode'];
+      $no_booking = $_POST['no_booking'];
       //query SQL
-      $query = "INSERT INTO penjemputan (kode) VALUES('$kode')"; 
+      $query = "INSERT INTO penjemputan (no_booking) VALUES('$no_booking')"; 
 
       //eksekusi query
       $result = $conn->query($query);
@@ -22,11 +22,7 @@
 
 ?>
 
-<?php 
-  //memanggil file conn.php yang berisi koneski ke database
-  //dengan include, semua kode dalam file conn.php dapat digunakan pada file index.php
-  include ('conn.php'); 
-?>
+
 
 <!doctype html>
 <html lang="en">
@@ -49,7 +45,7 @@
   <?php 
           //proses menampilkan data dari database:
           //siapkan query SQL
-          $query = "SELECT * FROM pelanggan WHERE username = '$username'";
+          $query = "SELECT * FROM pelanggan WHERE no_booking = '$no_booking'";
           $result = $conn->query($query);
       ?>
       <?php while($data = mysqli_fetch_array($result)): ?>
@@ -154,7 +150,7 @@
                     <?php 
                   //proses menampilkan data dari database:
                   //siapkan query SQL
-                  $query = "SELECT * FROM penjemputan WHERE  username = '$username'";
+                  $query = "SELECT * FROM penjemputan WHERE no_booking = '$no_booking'";
                   $result = $conn->query($query);
                  ?>
 
